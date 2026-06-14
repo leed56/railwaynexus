@@ -1,0 +1,36 @@
+{
+  "name": "railwaynexus",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Nexus ERP backend API — Railway + Supabase",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "npm run type-check",
+    "start": "tsx src/server.ts",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.100.1",
+    "@inngest/middleware-sentry": "^1.0.0",
+    "@sentry/node": "^10.57.0",
+    "@supabase/supabase-js": "^2.49.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "firebase-admin": "^13.10.0",
+    "inngest": "^4.5.0",
+    "stripe": "^17.7.0",
+    "tsx": "^4.19.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^20.17.0",
+    "typescript": "~5.8.3",
+    "vitest": "^3.0.4"
+  }
+}
