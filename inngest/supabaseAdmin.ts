@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
+import WebSocket from 'ws'
 
 const SUPABASE_URL =
   process.env.SUPABASE_URL ??
@@ -11,4 +12,5 @@ const SERVICE_KEY =
 
 export const supabaseAdmin = createClient(SUPABASE_URL, SERVICE_KEY, {
   auth: { autoRefreshToken: false, persistSession: false },
+  realtime: { transport: WebSocket as any },
 })
